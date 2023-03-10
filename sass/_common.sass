@@ -1,0 +1,29 @@
+*
+  box-sizing: border-box
+
+.layout-row
+  position: relative
+  height: 100vh
+  display: grid
+  grid-template-columns: 470px 1fr
+  background-color: $purple3
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 3
+    display: block
+    width: 1px
+    height: 1px
+    box-shadow: 0px 0px 500px 150px rgba(#7200ff, 20%)
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    right: 0
+    z-index: 1
+    display: block
+    width: 1px
+    height: 1px
+    box-shadow: 0px 0px 500px 300px rgba(#381A2E, 70%)

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Hisqaida2018-Bold';
+  src: url('../assets/fonts/Hisqaida2018-Bold.eot');
+  src: url('../assets/fonts/Hisqaida2018-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Hisqaida2018-Bold.woff') format('woff'),
+  url('../assets/fonts/Hisqaida2018-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin hisqaida-bold {
+  font-family: 'Hisqaida2018-Bold';
+}
