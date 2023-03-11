@@ -59,3 +59,62 @@
       color: $purple4
     &-icon
       transform: rotate(90deg)
+  &__inner
+    position: relative
+    z-index: 3
+    height: 100%
+    padding-top: 220px
+    display: flex
+    flex-direction: column
+  &-logo
+    line-height: 0
+  &__logo
+    margin-left: 80px
+    margin-bottom: 75px
+  &-link
+    position: relative
+    margin-bottom: 35px
+    padding-left: 80px
+    display: flex
+    align-items: center
+    gap: 14px
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 3px
+      height: 100%
+      background-color: $yellow1
+      opacity: 0
+      transition: 0.3s ease-in-out
+    &:nth-last-of-type(1)
+      margin-top: 50px
+    &:hover
+      &::before
+        opacity: 1
+      .sidebar-link
+        &-icon
+          svg
+            fill: $yellow1
+        &-label
+          color: $yellow1
+    &-icon
+      flex: 0 0 auto
+      line-height: 0
+      svg
+        transition: 0.3s ease-in-out
+        fill: $purple5
+    &-label
+      +intro-black
+      font-size: 22px
+      color: $purple5
+      transition: 0.3s ease-in-out
+  &-btn
+    +intro-black
+    font-size: 22px
+    height: 60px
+    padding: 0 22px
+  &__btn
+    margin-top: 120px
+    margin-left: 80px

@@ -12,3 +12,18 @@
 @mixin hisqaida-bold {
   font-family: 'Hisqaida2018-Bold';
 }
+
+@font-face {
+  font-family: 'Intro Black';
+  src: url('../assets/fonts/Intro-Black.eot');
+  src: url('../assets/fonts/Intro-Black.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Intro-Black.woff') format('woff'),
+  url('../assets/fonts/Intro-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin intro-black {
+  font-family: 'Intro Black';
+}
