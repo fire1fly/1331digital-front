@@ -27,3 +27,33 @@
 @mixin intro-black {
   font-family: 'Intro Black';
 }
+
+@font-face {
+  font-family: 'MagistralBlack';
+  src: url('../assets/fonts/MagistralBlack.eot');
+  src: url('../assets/fonts/MagistralBlack.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/MagistralBlack.woff') format('woff'),
+  url('../assets/fonts/MagistralBlack.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin magistral {
+  font-family: 'MagistralBlack';
+}
+
+@font-face {
+  font-family: 'Alegreya Sans SC Bold';
+  src: url('../assets/fonts/AlegreyaSansSC-Bold.eot');
+  src: url('../assets/fonts/AlegreyaSansSC-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/AlegreyaSansSC-Bold.woff') format('woff'),
+  url('../assets/fonts/AlegreyaSansSC-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin alegreya {
+  font-family: 'Alegreya Sans SC Bold';
+}

@@ -1,0 +1,202 @@
+.pcard
+  position: relative
+  z-index: 1
+  padding: 3px
+  &-backframe
+    opacity: 0
+    transition: 0.3s ease-in-out
+    div
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      &._design
+        background-color: $red1
+      &._frontend
+        background-color: $yellow1
+      &._backend
+        background-color: $blue1
+    &._c-2
+      div
+        &:nth-of-type(1)
+          clip-path: polygon(0 0, 100% 0%, 100% calc(50% - 3px), 0% calc(50% - 3px))
+      div
+        &:nth-of-type(2)
+          clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%)
+    &._c-3
+      div
+        &:nth-of-type(1)
+          clip-path: polygon(0 0, calc(50% - 3px) 0%, calc(50% - 3px) 3px, 0 calc(100% - 1px))
+      div
+        &:nth-of-type(2)
+          clip-path: polygon(50% 0, 100% 0%, 100% calc(100% - 3px), 50% 3px)
+      div
+        &:nth-of-type(3)
+          clip-path: polygon(1px 100%, 50% 3%, 100% 100%)
+  &-frame
+    position: relative
+    z-index: 2
+    padding-top: 30px
+    padding-bottom: 20px
+    overflow: hidden
+    width: 100%
+    height: 100%
+  &:hover
+    .pcard
+      &-preview
+        transform: scale(1.05)
+      &-backdrop
+        background-color: rgba(#322847, 0.3)
+      &-techtags
+        opacity: 0
+      &-logo
+        transform: scale(0.95)
+      &-bottom
+        opacity: 0
+      &-btn
+        opacity: 1
+      &-backframe
+        opacity: 1
+  &._pattern
+    &-1
+      width: 520px
+    &-2
+      width: 416px
+    &-3
+      width: 380px
+    &-4
+      width: 328px
+    &-5
+      width: 266px
+  &-preview
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center center
+    transition: 0.3s ease-in-out
+  &-backdrop
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+    width: 100%
+    height: 100%
+    background-color: rgba(#322847, 0.77)
+    transition: 0.3s ease-in-out
+  &-inner
+    position: relative
+    z-index: 3
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-techtags
+    margin-bottom: 10px
+    gap: 15px
+    transition: 0.3s ease-in-out
+  &-logo
+    width: 100%
+    height: 90px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: 0.3s ease-in-out
+    img
+      max-height: 100%
+  &-bottom
+    margin-top: auto
+    transition: 0.3s ease-in-out
+  &-type
+    margin-bottom: 5px
+    text-align: center
+    +magistral
+    font-size: 17px
+  &-sub
+    text-align: center
+    +alegreya
+    font-size: 13px
+    color: $white
+  &-pag
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 20px
+    &-placeholder
+      margin-top: 18px
+      height: 13px
+    &-item
+      position: relative
+      border: 1px solid transparent
+      width: 13px
+      height: 13px
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: calc(-100% - 6px)
+        width: 13px
+        height: 1px
+      &:nth-of-type(1)
+        &::before
+          display: none
+      &-fill
+        width: 7px
+        height: 7px
+        background-color: $green1
+      &._green
+        &-1
+          border-color: $green1
+          &::before
+            background: linear-gradient(90deg, #695f71 0%, $green1 100%)
+          .pcard-pag-item-fill
+            background-color: $green1
+            box-shadow: 0px 0px 20px 5px rgba($green1, 0.3)
+        &-2
+          border-color: $green2
+          &::before
+            background: linear-gradient(90deg, #695f71 0%, $green2 100%)
+          .pcard-pag-item-fill
+            background-color: $green2
+            box-shadow: 0px 0px 20px 5px rgba($green2, 0.3)
+        &-3
+          border-color: $green3
+          &::before
+            background: linear-gradient(90deg, #695f71 0%, $green3 100%)
+          .pcard-pag-item-fill
+            background-color: $green3
+            box-shadow: 0px 0px 20px 5px rgba($green3, 0.3)
+        &-4
+          border-color: $green4
+          &::before
+            background: linear-gradient(90deg, #695f71 0%, $green4 100%)
+          .pcard-pag-item-fill
+            background-color: $green4
+            box-shadow: 0px 0px 20px 5px rgba($green4, 0.3)
+      &._blue
+        &-1
+          border-color: $blue1
+          &::before
+            background: linear-gradient(90deg, #695f71 0%, $blue1 100%)
+          .pcard-pag-item-fill
+            background-color: $blue1
+            box-shadow: 0px 0px 20px 5px rgba($blue1, 0.3)
+  &-btn
+    position: absolute
+    bottom: 20px
+    left: 50%
+    transform: translateX(-50%)
+    +magistral
+    font-size: 17px
+    height: 42px
+    padding: 0 16px
+    opacity: 0
+    transition: 0.3s ease-in-out
