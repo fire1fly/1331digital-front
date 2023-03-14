@@ -10,7 +10,7 @@ a
   width: 100vw
   height: 100vh
   display: grid
-  grid-template-columns: 470px 1fr
+  grid-template-columns: 470px calc(100% - 470px)
   background-color: $purple3
   overflow: hidden
   &::before
@@ -33,3 +33,7 @@ a
     width: 1px
     height: 1px
     box-shadow: 0px 0px 500px 300px rgba(#381A2E, 70%)
+  .page-pag
+    position: relative
+    z-index: 2
+    padding-top: 100px
