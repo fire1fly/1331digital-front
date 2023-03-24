@@ -1,7 +1,6 @@
 // temp script
 
 const fields = document.querySelectorAll(".form1-input-block");
-console.log(fields);
 
 fields.forEach(field => {
   const input = field.querySelector(".form1-input")

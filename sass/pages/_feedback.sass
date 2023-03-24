@@ -1,12 +1,28 @@
 .pfb
   position: relative
   padding: 200px 60px 0 40px
+  height: 725px
   display: flex
   justify-content: space-between
   gap: 60px
+  &-backpic
+    position: absolute
+    z-index: 1
+    top: 0
+    left: -70px
+    opacity: 0.3
+  &__nrmb
+    z-index: 1
+    animation: fadeScale 0.3s ease-in-out 0s 1 normal forwards
   &-fb
+    position: relative
+    z-index: 2
     flex: 0 1 43%
+    display: flex
+    align-items: center
   &-cnt
+    position: relative
+    z-index: 2
     flex: 0 1 49%
   &-h
     margin-bottom: 80px
@@ -22,6 +38,8 @@
     display: flex
     flex-direction: column
     gap: 50px
+    &__wrapper
+      width: 100%
   &-cnt
     display: flex
     flex-direction: column
@@ -36,3 +54,30 @@
       display: grid
       grid-template-columns: repeat(2, 1fr)
       gap: 45px
+  &-ans
+    position: relative
+    display: flex
+    width: 100%
+    align-items: center
+    justify-content: center
+    z-index: 2
+    &__inner
+      position: relative
+      z-index: 2
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 12px
+    &-title
+      text-align: center
+      +magistral
+      font-size: 26px
+    &-subtitle
+      text-align: center
+      +geometria-bold
+      font-size: 13px
+    &-btn
+      margin-top: 50px
+      height: 50px
+      padding: 0 16px
+      +geometria-bold

@@ -1,4 +1,5 @@
 .cntc
+  position: relative
   min-height: 85px
   padding-left: 30px
   padding-right: 15px
@@ -6,6 +7,21 @@
   align-items: center
   gap: 30px
   background-color: $purple10
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    width: 100%
+    height: 100%
+    clip-path: circle(0% at 0% 50%)
+    background-color: lighten($purple10, 3%)
+    transition: 0.3s ease-in-out
+    will-change: clip-path
+  &:hover
+    &::after
+      clip-path: circle(100% at 50% 50%)
   &._yellow-1
     .cntc
       &-icon
@@ -40,17 +56,22 @@
         color: $green6
   &-icon
     position: relative
+    z-index: 2
     flex: 0 0 auto
     line-height: 0
     &::after
       content: ''
       position: absolute
+      z-index: 1
       top: 50%
       left: 50%
       height: 50%
       display: block
       width: 1px
       height: 1px
+  &-info
+    position: relative
+    z-index: 2
   &-title
     +magistral
     font-size: 17px
