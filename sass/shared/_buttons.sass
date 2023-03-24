@@ -4,12 +4,18 @@
   align-items: center
   justify-content: center
   cursor: pointer
+  &-icon
+    flex: 0 0 auto
+    line-height: 0
   &-yellow
     position: relative
     overflow: hidden
     border: 3px solid $yellow1
     background-color: transparent
     color: $yellow1
+    .btn-icon
+      svg, path
+        fill: $yellow1
     &::before
       content: ''
       position: absolute
@@ -27,7 +33,8 @@
         clip-path: circle(100% at 50% 50%)
       .btn-text
         color: $white
-    .btn-text
-      position: relative
-      z-index: 2
-      transition: 0.3s ease-in-out
+    .btn
+      &-text, &-icon
+        position: relative
+        z-index: 2
+        transition: 0.3s ease-in-out

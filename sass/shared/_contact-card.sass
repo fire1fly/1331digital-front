@@ -1,0 +1,60 @@
+.cntc
+  min-height: 85px
+  padding-left: 30px
+  padding-right: 15px
+  display: flex
+  align-items: center
+  gap: 30px
+  background-color: $purple10
+  &._yellow-1
+    .cntc
+      &-icon
+        position: relative
+        &::after
+          box-shadow: 0px 0px 60px 30px rgba($yellow1, 0.2)
+      &-title
+        color: $yellow1
+  &._blue-1
+    .cntc
+      &-icon
+        position: relative
+        &::after
+          box-shadow: 0px 0px 60px 30px rgba($blue1, 0.2)
+      &-title
+        color: $blue1
+  &._orange-2
+    .cntc
+      &-icon
+        position: relative
+        &::after
+          box-shadow: 0px 0px 60px 30px rgba($orange2, 0.2)
+      &-title
+        color: $orange2
+  &._green-6
+    .cntc
+      &-icon
+        position: relative
+        &::after
+          box-shadow: 0px 0px 60px 30px rgba($green6, 0.2)
+      &-title
+        color: $green6
+  &-icon
+    position: relative
+    flex: 0 0 auto
+    line-height: 0
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      height: 50%
+      display: block
+      width: 1px
+      height: 1px
+  &-title
+    +magistral
+    font-size: 17px
+    color: $white
+  &-sub
+    +geometria-bold
+    font-size: 14px
