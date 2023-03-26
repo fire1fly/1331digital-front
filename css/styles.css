@@ -105,6 +105,7 @@ input, textarea {
   left: 0;
   z-index: 3;
   display: block;
+  border-radius: 50%;
   width: 1px;
   height: 1px;
   -webkit-box-shadow: 0px 0px 500px 150px rgba(114, 0, 255, 0.2);
@@ -1056,6 +1057,123 @@ input, textarea {
   fill: #FFFFFF;
 }
 
+.ec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.ec._frontend {
+  background: transparent url("../assets/static/employee-card-frontend-bg.png") no-repeat;
+  background-size: cover;
+}
+.ec._frontend .ec-name {
+  color: #ffb849;
+}
+.ec._frontend .ec-stat-value {
+  color: #ffb849;
+}
+.ec._design {
+  background: transparent url("../assets/static/employee-card-design-bg.png") no-repeat;
+  background-size: cover;
+}
+.ec._design .ec-name {
+  color: #F11C4D;
+}
+.ec._design .ec-stat-value {
+  color: #F11C4D;
+}
+.ec._backend {
+  background: transparent url("../assets/static/employee-card-backend-bg.png") no-repeat;
+  background-size: cover;
+}
+.ec._backend .ec-name {
+  color: #00DFFF;
+}
+.ec._backend .ec-stat-value {
+  color: #00DFFF;
+}
+.ec-avatar {
+  height: 266px;
+}
+.ec-name {
+  margin-bottom: 8px;
+  text-align: center;
+  font-family: "MagistralBlack";
+  font-size: 17px;
+}
+.ec-role {
+  text-align: center;
+  font-size: 13px;
+}
+.ec-text {
+  font-family: "Geometria Bold";
+  color: #FFFFFF;
+}
+.ec-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px 40px;
+}
+.ec-stat-card {
+  position: relative;
+  border: 1px solid #372A4B;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.ec-stat-card::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  border: 1px dotted #372A4B;
+  width: 100%;
+  height: 100%;
+}
+.ec-stat-value {
+  font-family: "Intro Black";
+  font-size: 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+}
+.ec-stat-value ._sup {
+  font-size: 12px;
+}
+.ec-stat-label {
+  font-family: "Intro Black";
+  font-size: 13px;
+}
+
 .pmain {
   position: relative;
   z-index: 2;
@@ -1589,4 +1707,90 @@ input, textarea {
   height: 50px;
   padding: 0 16px;
   font-family: "Geometria Bold";
+  font-size: 17px;
+}
+
+.psl {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.psl-title {
+  text-align: right;
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+  left: 0;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  font-family: "MagistralBlack";
+  font-size: 47px;
+  color: #2D1C46;
+}
+.psl-title .sup {
+  font-size: 20px;
+}
+.psl-slider {
+  width: 100%;
+  overflow-x: auto;
+}
+.psl-slider-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 70px;
+}
+.psl-slider .ec {
+  width: 325px;
+  padding-bottom: 20px;
+  gap: 30px;
+  background-color: #271B3A;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.psl-slider .ec-profile {
+  position: relative;
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.psl-slider .ec-profile-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.psl-outlink {
+  position: relative;
+  padding-left: 60px;
+  cursor: pointer;
+}
+.psl-outlink__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.psl-outlink-label {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 50px;
+  text-align: right;
+  font-family: "Hisqaida2018-Bold";
+  font-size: 17px;
+  color: #342a3c;
 }/*# sourceMappingURL=styles.css.map */

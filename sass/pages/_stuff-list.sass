@@ -1,0 +1,54 @@
+.psl
+  position: relative
+  display: flex
+  align-items: center
+  height: 100%
+  &-title
+    text-align: right
+    position: absolute
+    z-index: 1
+    top: 60px
+    left: 0
+    transform: rotate(-5deg)
+    +magistral
+    font-size: 47px
+    color: #2D1C46
+    .sup
+      font-size: 20px
+  &-slider
+    width: 100%
+    overflow-x: auto
+    &-track
+      display: flex
+      gap: 70px
+    .ec
+      width: 325px
+      padding-bottom: 20px
+      gap: 30px
+      background-color: #271B3A
+      backdrop-filter: blur(10px)
+      &-profile
+        position: relative
+        transform: translateY(-5px)
+        &-info
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+  &-outlink
+    position: relative
+    padding-left: 60px
+    cursor: pointer
+    &__wrapper
+      display: flex
+      align-items: center
+      justify-content: center
+    &-label
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 50px
+      text-align: right
+      +hisqaida-bold
+      font-size: 17px
+      color: #342a3c
