@@ -41,11 +41,15 @@
     font-size: 13px
   &-text
     +geometria-bold
+    font-size: 14px
     color: $white
+    &._center
+      text-align: center
   &-stat
     display: flex
     align-items: center
     justify-content: center
+    flex-wrap: wrap
     gap: 20px 40px
     &-card
       position: relative
@@ -75,3 +79,13 @@
     &-label
       +intro-black
       font-size: 13px
+  &-skills
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 10px
+    &-item
+      flex: 0 0 auto
+      line-height: 0
+      img, svg
+        width: 36px

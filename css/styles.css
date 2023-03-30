@@ -79,6 +79,18 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+*::-webkit-scrollbar-track {
+  background: #201727;
+}
+*::-webkit-scrollbar-thumb {
+  background: #ffb849;
+  -webkit-box-shadow: 0px 0px 40px 10px rgba(255, 184, 73, 0.2);
+          box-shadow: 0px 0px 40px 10px rgba(255, 184, 73, 0.2);
+}
 
 a {
   text-decoration: none;
@@ -1114,7 +1126,11 @@ input, textarea {
 }
 .ec-text {
   font-family: "Geometria Bold";
+  font-size: 14px;
   color: #FFFFFF;
+}
+.ec-text._center {
+  text-align: center;
 }
 .ec-stat {
   display: -webkit-box;
@@ -1126,6 +1142,8 @@ input, textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 20px 40px;
 }
 .ec-stat-card {
@@ -1172,6 +1190,26 @@ input, textarea {
 .ec-stat-label {
   font-family: "Intro Black";
   font-size: 13px;
+}
+.ec-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+.ec-skills-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  line-height: 0;
+}
+.ec-skills-item img, .ec-skills-item svg {
+  width: 36px;
 }
 
 .pmain {
@@ -1793,4 +1831,130 @@ input, textarea {
   font-family: "Hisqaida2018-Bold";
   font-size: 17px;
   color: #342a3c;
+}
+
+.pep {
+  position: relative;
+  height: 100%;
+  padding-top: 100px;
+}
+.pep-title {
+  text-align: right;
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 0;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  font-family: "MagistralBlack";
+  font-size: 47px;
+  color: #2D1C46;
+}
+.pep-title .sup {
+  font-size: 20px;
+}
+.pep-grid {
+  position: relative;
+  height: 100%;
+  padding-right: 36px;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+}
+.pep-grid-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pep-ec {
+  gap: 35px;
+}
+.pep-ec._frontend, .pep-ec._backend, .pep-ec._design {
+  background: transparent;
+}
+.pep-prt {
+  height: calc(100vh - 100px);
+  padding-right: 36px;
+  overflow-y: auto;
+}
+.pep-prt-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.pep-prt__inner {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.pep-prt-row {
+  margin-bottom: 16px;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 16px;
+}
+.pep-prt-row._pattern-1 {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+.pep-prt-row._pattern-2 {
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+}
+.pep-tl {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.pep-tl-item {
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.pep-tl-item._active .pep-tl-val {
+  color: #FFFFFF;
+}
+.pep-tl-item._active .pep-tl-line {
+  background-color: #FFFFFF;
+}
+.pep-tl-item._year {
+  gap: 12px;
+}
+.pep-tl-item._year .pep-tl-line {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  width: 20px;
+}
+.pep-tl-item._month {
+  gap: 22px;
+}
+.pep-tl-item._month .pep-tl-line {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10px;
+          flex: 0 0 10px;
+  width: 10px;
+}
+.pep-tl-val {
+  text-align: right;
+  font-family: "Alegreya Sans SC Bold";
+  font-size: 16px;
+  color: #474159;
+}
+.pep-tl-line {
+  height: 1px;
+  background-color: #474159;
 }/*# sourceMappingURL=styles.css.map */
