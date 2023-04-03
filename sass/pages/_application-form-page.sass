@@ -34,6 +34,10 @@
       text-align: center
       +intro-black
       font-size: 35px
+    &-subtitle
+      text-align: center
+      +intro-black
+      font-size: 22px
     &-b
       width: 100%
       flex: 1 1 auto
@@ -55,8 +59,19 @@
       margin-top: 60px
       width: 100%
       padding-right: 10px
+      display: flex
+      flex-direction: column
+      align-items: center
       .form2-btn
         width: 100%
+      .apfrm-cnt-grid
+        margin-bottom: 70px
+    &-outbtn
+      height: 70px
+      padding: 0 22px
+      gap: 20px
+      +intro-black
+      font-size: 17px
     &__blockquote
       min-height: 66px
   &-step
@@ -72,10 +87,29 @@
       justify-content: center
       flex-wrap: wrap
       gap: 10px 20px
-  &-cnt
+  &-fbcnt
     +geometria-bold
     font-size: 18px
     &-grid
       display: grid
       grid-template-columns: repeat(2, 1fr)
       gap: 30px
+  &-cnt
+    border-radius: 50%
+    width: 60px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #221932
+    transition: 0.3s ease-in-out
+    &:hover
+      background-color: lighten(#221932, 5%)
+    img, svg
+      max-width: 50%
+    &-grid
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+      gap: 35px

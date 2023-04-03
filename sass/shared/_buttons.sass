@@ -4,6 +4,9 @@
   align-items: center
   justify-content: center
   cursor: pointer
+  &-text, &-icon
+    position: relative
+    z-index: 2
   &-icon
     flex: 0 0 auto
     line-height: 0
@@ -35,6 +38,24 @@
         color: $white
     .btn
       &-text, &-icon
-        position: relative
-        z-index: 2
         transition: 0.3s ease-in-out
+  &-translucent
+    &-light
+      position: relative
+      background-color: rgba($white, 0.03)
+      color: $white
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        width: 100%
+        height: 100%
+        clip-path: circle(0 at 50% 50%)
+        background-color: rgba($white, 0.04)
+        transition: 0.3s ease-in-out
+        will-change: clip-path
+      &:hover
+        &::before
+          clip-path: circle(100% at 50% 50%)
