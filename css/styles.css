@@ -1172,6 +1172,23 @@ input, textarea {
   font-size: 13px;
   color: #F11C4D;
 }
+.form2-input-block {
+  position: relative;
+}
+.form2-input-icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 27px;
+}
+.form2-input-icon img, .form2-input-icon svg {
+  width: 22px;
+}
+.form2-input-icon + .form2-input {
+  padding-right: 55px;
+}
 .form2-btn {
   padding: 0 28px;
   height: 78px;
@@ -1184,6 +1201,14 @@ input, textarea {
 }
 .form2-btn:hover .btn-icon svg, .form2-btn:hover .btn-icon path {
   fill: #FFFFFF;
+}
+.form2-btn._border-thin {
+  border-width: 1px;
+}
+.form2-btn._center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .form2-btn .btn-icon path {
   -webkit-transition: 0.3s ease-in-out;
@@ -2262,6 +2287,12 @@ input, textarea {
           flex-direction: column;
   gap: 30px;
 }
+.apfrm-form-block-label {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Geometria Bold";
+  font-size: 20px;
+}
 .apfrm-form-f {
   margin-top: 60px;
   width: 100%;
@@ -2295,4 +2326,13 @@ input, textarea {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 10px 20px;
+}
+.apfrm-cnt {
+  font-family: "Geometria Bold";
+  font-size: 18px;
+}
+.apfrm-cnt-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }/*# sourceMappingURL=styles.css.map */
