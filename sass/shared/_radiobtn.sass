@@ -1,0 +1,22 @@
+.rb
+  border: 2px solid #2b253a
+  width: 20px
+  height: 20px
+  display: flex
+  align-items: center
+  justify-content: center
+  &__wrapper
+    display: flex
+    align-items: center
+    gap: 10px
+    cursor: pointer
+  &-check
+    width: 7px
+    height: 7px
+    background-color: $red1
+    opacity: 0
+    transition: 0.3s ease-in-out
+  input[type="radio"]
+    display: none
+    &:checked + .rb-check
+      opacity: 1

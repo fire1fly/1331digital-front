@@ -1,0 +1,40 @@
+.acrd
+  &-h
+    border-bottom: 3px solid rgba($white, 0.23)
+    min-height: 77px
+    padding: 10px 30px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 10px
+    background-color: rgba(#443c56, 0.2)
+    &-label
+      +geometria-bold
+      font-size: 18px
+    &-arrow
+      flex: 0 0 auto
+      width: 30px
+      height: 30px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: #262032
+      cursor: pointer
+      svg, img
+        transition: 0.3s ease-in-out
+        width: 16px
+  &-content
+    padding: 8px 30px
+    background-color: #1d1928
+  &-rowlist
+    &-item
+      border-bottom: 1px solid #2b253b
+      padding: 15px 0
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &:nth-last-of-type(1)
+        border-bottom: none
+    &-label
+      +geometria-reg
+      font-size: 14px
