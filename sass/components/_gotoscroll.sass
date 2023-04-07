@@ -1,0 +1,51 @@
+.gts
+  display: flex
+  align-items: center
+  flex-direction: column
+  gap: 24px
+  cursor: pointer
+  &:hover
+    .gts
+      &-pic
+        &._1
+          transform: translateY(3px)
+        &._2
+          transform: translateX(-50%) translateY(6px)
+  &-label
+    +magistral
+    font-size: 17px
+  &-pic
+    width: 100%
+    height: 20px
+    background-color: $yellow1
+    &-group
+      position: relative
+      width: 84px
+      height: 35px
+      &::after
+        content: ''
+        position: absolute
+        z-index: 2
+        top: 30%
+        left: 50%
+        width: 1px
+        height: 1px
+        box-shadow: 0px 0px 30px 15px rgba($yellow1, 0.3)
+    &._1
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      clip-path: polygon(0% 0%, 50% 70%, 100% 0%, 50% 100%)
+      transition: 0.3s ease-in-out
+    &._2
+      position: absolute
+      left: 50%
+      bottom: 0
+      clip-path: polygon(0% 0%, 50% 65%, 100% 0%, 50% 100%)
+      width: 60px
+      height: 18px
+      transform: translateX(-50%)
+      opacity: 0.5
+      box-shadow: none
+      transition: 0.3s ease-in-out

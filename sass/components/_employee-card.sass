@@ -29,6 +29,45 @@
       &-stat
         &-value
           color: $blue1
+  &-outsign
+    cursor: pointer
+    width: 27px
+    height: 27px
+    display: flex
+    align-items: center
+    justify-content: center
+    &._red
+      background-color: rgba(#873474, 0.5)
+      .ec-outsign__inner
+        background-color: #873474
+    &-row
+      width: 100%
+      display: flex
+      align-items: center
+      &._end
+        justify-content: flex-end
+    &__inner
+      width: 21px
+      height: 21px
+      display: flex
+      align-items: center
+      justify-content: center
+      +magistral
+      font-size: 17px
+      color: $white
+      svg, img
+        max-width: 50%
+  &-block
+    &-label
+      margin-bottom: 20px
+      text-align: center
+      +magistral
+      font-size: 23px
+      color: #49217f
+    &-value
+      text-align: center
+      +magistral
+      font-size: 30px
   &-avatar
     height: 266px
   &-name
