@@ -46,6 +46,14 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "CourierNew";
+  src: url("../assets/fonts/CourierNewPSMT.eot");
+  src: url("../assets/fonts/CourierNewPSMT.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/CourierNewPSMT.woff") format("woff"), url("../assets/fonts/CourierNewPSMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 ._text-upper {
   text-transform: uppercase;
 }
@@ -1779,6 +1787,93 @@ input, textarea {
   color: #6f6a7f;
 }
 
+.cd1-header {
+  padding: 12px 12px 0;
+  background-color: #1C132B;
+}
+.cd1-tabs {
+  width: 100%;
+  overflow-x: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cd1-tabs::-webkit-scrollbar {
+  height: 2px;
+}
+.cd1-tabs::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.cd1-tabs-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 25px;
+  white-space: nowrap;
+  font-family: "Geometria Regular";
+  color: #706a83;
+  cursor: pointer;
+}
+.cd1-tabs-item._active {
+  background-color: #211732;
+  font-family: "Geometria Bold";
+  color: #FFFFFF;
+}
+.cd1-body {
+  height: 300px;
+  padding: 20px 16px;
+  background-color: #211732;
+}
+.cd1-textarea {
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cd1-textarea::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #F11C4D;
+}
+.cd1-rows {
+  margin-left: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.cd1-rows-nums {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-family: "CourierNew";
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 1.4;
+  color: #655f78;
+}
+.cd1-rows code {
+  font-family: "CourierNew";
+  font-size: 19px;
+  line-height: 1.4;
+  color: #FFFFFF;
+}
+.cd1-emptyrow {
+  height: 26px;
+}
+
 .pspc {
   position: relative;
   padding: 50px 0;
@@ -3137,7 +3232,6 @@ input, textarea {
 .pp-section._shape {
   position: relative;
   z-index: 2;
-  height: 1000px;
   padding: 90px 0;
   -webkit-clip-path: polygon(0% 90px, 100% 0%, 100% 100%, 0% calc(100% - 90px));
           clip-path: polygon(0% 90px, 100% 0%, 100% 100%, 0% calc(100% - 90px));

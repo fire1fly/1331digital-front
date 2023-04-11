@@ -87,3 +87,18 @@
 @mixin geometria-bold {
   font-family: 'Geometria Bold';
 }
+
+@font-face {
+  font-family: 'CourierNew';
+  src: url('../assets/fonts/CourierNewPSMT.eot');
+  src: url('../assets/fonts/CourierNewPSMT.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/CourierNewPSMT.woff') format('woff'),
+  url('../assets/fonts/CourierNewPSMT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin couriernew {
+  font-family: 'CourierNew';
+}
