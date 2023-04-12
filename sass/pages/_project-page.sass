@@ -121,8 +121,10 @@
       position: relative
       z-index: 2
       padding: 90px 0
+      transform: translateY(-90px)
       clip-path: polygon(0 0, 100% 90px, 100% calc(100% - 90px), 0% 100%)
       box-shadow: 0px 0px 200px 100px rgba(#1c1525, 0.14)
+      background: linear-gradient(180deg, #2F194C 0%, #231A2F 100%)
     &-heading
       &__blockquote
         display: inline-block
@@ -140,7 +142,6 @@
         color: #34254D
       ._sub
         font-size: 36px
-
   &-bar
     display: flex
     align-items: center
@@ -172,3 +173,23 @@
             height: 3px
             background-color: $yellow1
             box-shadow: 0px 0px 15px 8px rgba($yellow1, 0.1)
+  &-f
+    position: relative
+    z-index: 4
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 40px 45px
+    background-color: #201731
+    &-info
+      +geometria-bold
+      font-size: 15px
+      color: #5d5370
+      ._sub
+        color: #433957
+    &-logo
+      max-width: 190px
+      width: 100%
+      line-height: 0
+      img, svg
+        max-width: 100%

@@ -1923,6 +1923,102 @@ input, textarea {
   margin-top: 20px;
 }
 
+.scrolltop {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1260px;
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  cursor: pointer;
+}
+.scrolltop:hover .scrolltop-shape-1 {
+  background-color: rgba(60, 50, 80, 0.5);
+}
+.scrolltop:hover .scrolltop-shape-2 {
+  background-color: rgba(60, 50, 80, 0.5);
+}
+.scrolltop:hover .scrolltop-icon svg {
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+.scrolltop-shape-1 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(70px 0, calc(100% - 70px) 0, calc(100% - 20px) 100%, 20px 100%);
+          clip-path: polygon(70px 0, calc(100% - 70px) 0, calc(100% - 20px) 100%, 20px 100%);
+  background-color: rgba(60, 50, 80, 0.3);
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.scrolltop-shape-2 {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(40px 15px, calc(100% - 40px) 15px, 100% 100%, 0 100%);
+          clip-path: polygon(40px 15px, calc(100% - 40px) 15px, 100% 100%, 0 100%);
+  background-color: rgba(60, 50, 80, 0.3);
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.scrolltop__inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: calc(100% - 15px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 14px;
+}
+.scrolltop-icon {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  line-height: 0;
+}
+.scrolltop-icon svg {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.scrolltop-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  -webkit-box-shadow: 0px 0px 20px 15px rgba(255, 184, 73, 0.3);
+          box-shadow: 0px 0px 20px 15px rgba(255, 184, 73, 0.3);
+}
+.scrolltop-label {
+  font-family: "Intro Black";
+  font-size: 19px;
+}
+
 .pspc {
   position: relative;
   padding: 50px 0;
@@ -2176,6 +2272,202 @@ input, textarea {
   display: inline-block;
   padding: 0 15px;
   background-color: #2B193E;
+}
+
+.pttl {
+  overflow-x: hidden;
+}
+.pttl__inner {
+  padding: 50px 0;
+}
+.pttl__pstat {
+  margin-bottom: 120px;
+}
+
+.pstat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.pstat-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.pstat-item__wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pstat-item__wrapper:nth-of-type(1) .pstat-item-step-line:nth-of-type(1) {
+  opacity: 0;
+}
+.pstat-item__wrapper:nth-last-of-type(1) .pstat-item-step-line:nth-last-of-type(1) {
+  opacity: 0;
+}
+.pstat-item__wrapper:hover .pstat-item-value {
+  color: #ffb849;
+}
+.pstat-item__wrapper:hover .pstat-item-step-point::before {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.pstat-item__wrapper:hover .pstat-item-step-point::after {
+  opacity: 1;
+}
+.pstat-item-bgpic {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.3;
+}
+.pstat-item-value {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-family: "MagistralBlack";
+  font-size: 57px;
+  color: #FFFFFF;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.pstat-item-desc {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Geometria Regular";
+  font-size: 16px;
+  color: #847c96;
+}
+.pstat-item-step {
+  margin-top: 90px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 22px;
+}
+.pstat-item-step-line {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  height: 1px;
+  background-color: #352150;
+}
+.pstat-item-step-point {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #ffb849;
+}
+.pstat-item-step-point::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -13px;
+  left: -13px;
+  border-radius: 50%;
+  border: 3px solid #ffb849;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.pstat-item-step-point::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  -webkit-box-shadow: 0px 0px 30px 15px rgba(255, 184, 73, 0.2);
+          box-shadow: 0px 0px 30px 15px rgba(255, 184, 73, 0.2);
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.pgeo-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.pgeo-grid__inner {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 600px;
+          flex: 0 1 600px;
+  padding-bottom: 90px;
+}
+.pgeo-grid .pgeo-info {
+  margin-top: 90px;
+}
+.pgeo-pic {
+  -ms-flex-item-align: end;
+      align-self: end;
+}
+.pgeo-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-family: "Geometria Regular";
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.pgeo-info p {
+  line-height: 1.4;
+}
+.pgeo-info ._sub {
+  color: #928ca1;
+}
+.pgeo-info .pgeo-logo-vendor {
+  margin-top: 80px;
+}
+.pgeo-logo-vendor {
+  max-width: 318px;
+  width: 100%;
+  line-height: 0;
+}
+.pgeo-logo-vendor img {
+  width: 100%;
 }
 
 .prld {
@@ -3420,10 +3712,16 @@ input, textarea {
   position: relative;
   z-index: 2;
   padding: 90px 0;
+  -webkit-transform: translateY(-90px);
+      -ms-transform: translateY(-90px);
+          transform: translateY(-90px);
   -webkit-clip-path: polygon(0 0, 100% 90px, 100% calc(100% - 90px), 0% 100%);
           clip-path: polygon(0 0, 100% 90px, 100% calc(100% - 90px), 0% 100%);
   -webkit-box-shadow: 0px 0px 200px 100px rgba(28, 21, 37, 0.14);
           box-shadow: 0px 0px 200px 100px rgba(28, 21, 37, 0.14);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2F194C), to(#231A2F));
+  background: -o-linear-gradient(top, #2F194C 0%, #231A2F 100%);
+  background: linear-gradient(180deg, #2F194C 0%, #231A2F 100%);
 }
 .pp-section-heading__blockquote {
   display: inline-block;
@@ -3495,4 +3793,35 @@ input, textarea {
   background-color: #ffb849;
   -webkit-box-shadow: 0px 0px 15px 8px rgba(255, 184, 73, 0.1);
           box-shadow: 0px 0px 15px 8px rgba(255, 184, 73, 0.1);
+}
+.pp-f {
+  position: relative;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 45px;
+  background-color: #201731;
+}
+.pp-f-info {
+  font-family: "Geometria Bold";
+  font-size: 15px;
+  color: #5d5370;
+}
+.pp-f-info ._sub {
+  color: #433957;
+}
+.pp-f-logo {
+  max-width: 190px;
+  width: 100%;
+  line-height: 0;
+}
+.pp-f-logo img, .pp-f-logo svg {
+  max-width: 100%;
 }/*# sourceMappingURL=styles.css.map */

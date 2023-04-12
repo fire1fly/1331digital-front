@@ -1,0 +1,97 @@
+.pstat
+  display: flex
+  justify-content: space-between
+  &-item
+    position: relative
+    display: flex
+    flex-direction: column
+    &__wrapper
+      flex: 1 1 auto
+      display: flex
+      flex-direction: column
+      align-items: center
+      &:nth-of-type(1)
+        .pstat-item-step
+          &-line
+            &:nth-of-type(1)
+              opacity: 0
+      &:nth-last-of-type(1)
+        .pstat-item-step
+          &-line
+            &:nth-last-of-type(1)
+              opacity: 0
+      &:hover
+        .pstat
+          &-item
+            &-value
+              color: $yellow1
+            &-step
+              &-point
+                &::before
+                  transform: scale(1)
+                &::after
+                  opacity: 1
+    &-bgpic
+      position: absolute
+      z-index: 1
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0.3
+    &-value
+      position: relative
+      z-index: 2
+      text-align: center
+      +magistral
+      font-size: 57px
+      color: $white
+      transition: 0.3s ease-in-out
+    &-desc
+      position: relative
+      z-index: 2
+      margin-top: 20px
+      text-align: center
+      +geometria-reg
+      font-size: 16px
+      color: #847c96
+    &-step
+      margin-top: 90px
+      width: 100%
+      display: flex
+      align-items: center
+      gap: 22px
+      &-line
+        flex: 1 1 auto
+        width: 100%
+        height: 1px
+        background-color: #352150
+      &-point
+        position: relative
+        flex: 0 0 auto
+        border-radius: 50%
+        width: 10px
+        height: 10px
+        background-color: $yellow1
+        &::before
+          content: ''
+          position: absolute
+          z-index: 2
+          top: -13px
+          left: -13px
+          border-radius: 50%
+          border: 3px solid $yellow1
+          width: 30px
+          height: 30px
+          transform: scale(0)
+          transition: 0.3s ease-in-out
+        &::after
+          content: ''
+          position: absolute
+          z-index: 1
+          top: 50%
+          left: 50%
+          width: 1px
+          height: 1px
+          box-shadow: 0px 0px 30px 15px rgba($yellow1, 0.2)
+          opacity: 0
+          transition: 0.3s ease-in-out
