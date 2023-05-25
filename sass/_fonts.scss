@@ -29,6 +29,20 @@
 }
 
 @font-face {
+  font-family: 'MagistralTT';
+  src: url('../assets/fonts/MagistralTT.eot');
+  src: url('../assets/fonts/MagistralTT.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/MagistralTT.woff') format('woff'),
+  url('../assets/fonts/MagistralTT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin magistraltt {
+  font-family: 'MagistralTT';
+}
+@font-face {
   font-family: 'MagistralBlack';
   src: url('../assets/fonts/MagistralBlack.eot');
   src: url('../assets/fonts/MagistralBlack.eot?#iefix') format('embedded-opentype'),
@@ -39,7 +53,7 @@
   font-display: swap;
 }
 
-@mixin magistral {
+@mixin magistral-black {
   font-family: 'MagistralBlack';
 }
 
