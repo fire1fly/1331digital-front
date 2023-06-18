@@ -10,6 +10,7 @@
     "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node",
+    // правила, конфигурирующие абсолютные пути
     "baseUrl": ".",
     "paths": {
       "*": [
@@ -29,5 +30,5 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
 }
