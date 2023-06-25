@@ -1,29 +1,20 @@
 {
   "compilerOptions": {
-    // путь к директории сборки, в данном случае не имеет значения
-    // сборка производится используя webpack
     "outDir": "./dist/",
-    // правило включает отчет об ошибке при неявном any
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "es5",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowJs": true,
+    "strict": true,
     "moduleResolution": "node",
-    // правила, конфигурирующие абсолютные пути
     "baseUrl": ".",
     "paths": {
       "*": [
         "./src/*"
       ]
     },
-    // правило позволяет работать с пакетами, которые используют common js (require & module.exporst),
-    // как с обычными пакетами с помощью import export
     "esModuleInterop": true,
-    // правило позволяет при работе с модулями, не имеющими default import,
-    // создавать их, используя лоадеры (ts-loader babel-loader)
-    // и использовать такую конструкцию типа import Module from 'module'
-    // вместо import * as Module from 'module'
     "allowSyntheticDefaultImports": true,
   },
   "ts-node": {
@@ -31,4 +22,9 @@
       "module": "CommonJS"
     }
   },
+  "include": [
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+  ],
 }
