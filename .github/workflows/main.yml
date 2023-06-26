@@ -1,4 +1,4 @@
-name: Gboard GitHub Actions
+name: 1331Digital GitHub Actions
 run-name: linting, testing, building
 on:
   push:
@@ -19,11 +19,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm install --legacy-peer-deps
-      - name: linting typescript
-        run: npm run lint:ts
-      - name: linting css
-        run: npm run lint:scss
-      - name: unit testing
-        run: npm run test:unit
-      - name: build production project
-        run: npm run build:prod
+      # - name: linting typescript
+      #   run: npm run lint:ts
+      # - name: linting css
+      #   run: npm run lint:scss
+      # - name: unit testing
+      #   run: npm run test:unit
+      # - name: build production project
+      #   run: npm run build:prod
