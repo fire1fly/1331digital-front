@@ -1,0 +1,47 @@
+:root {
+  /* Typography */
+  --font-family-main: "Intro Black", system-ui, -apple-system, sans-serif;
+  --font-size-xs: 12px;
+  --font-line-xs: 20px;
+  --font-size-s: 14px;
+  --font-line-s: 22px;
+  --font-size-m: 16px;
+  --font-line-m: 24px;
+  --font-size-l: 24px;
+  --font-line-l: 32px;
+  --font-size-xl: 32px;
+  --font-line-xl: 40px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-purple1: #161325;
+  --color-purple2: #1b172b;
+  --color-purple3: #1f1a2e;
+  --color-purple4: #352c4a;
+  --color-purple5: #706980;
+  --color-purple6: #2a1c3d;
+  --color-purple7: #312341;
+  --color-purple8: #564d69;
+  --color-purple9: #2d263d;
+  --color-purple10: #281f36;
+  --color-yellow1: #ffb849;
+  --color-yellow2: #ffc700;
+  --color-red1: #f11c4d;
+  --color-red2: #ff2652;
+  --color-blue1: #00dfff;
+  --color-green1: #00e868;
+  --color-green2: #00f493;
+  --color-green3: #d0f400;
+  --color-green4: #a7e800;
+  --color-green5: #2dd584;
+  --color-green6: #8fca0a;
+  --color-blue2: #00b2f6;
+  --color-blue3: #277fff;
+  --color-violet: #7200ff;
+  --color-orange1: #ec561b;
+  --color-orange2: #ffa300;
+
+  /* z indexes */
+  --z-index-modal: 10;
+}
