@@ -19,6 +19,9 @@ export default function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     use: [
       {
         loader: 'file-loader',
+        options: {
+          outputPath: 'assets',
+        },
       },
     ],
   };
