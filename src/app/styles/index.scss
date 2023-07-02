@@ -20,10 +20,6 @@
   }
 }
 
-body {
-  font: var(--font-m);
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -34,25 +30,101 @@ textarea {
   outline: none;
 }
 
-.layout-row {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 480px 1fr;
-  overflow: hidden;
+.btn {
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 
-  &-page {
-    height: 100%;
-    padding-left: 40px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .page-pag {
+  &-text,
+  &-icon {
     position: relative;
     z-index: 2;
-    padding-top: 100px;
+  }
+
+  &-icon {
+    flex: 0 0 auto;
+    line-height: 0;
+  }
+
+  &-yellow {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--color-yellow1);
+    background-color: transparent;
+    color: var(--color-yellow1);
+
+    .btn-icon {
+      svg,
+      path {
+        fill: var(--color-yellow1);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      clip-path: circle(0 at 50% 50%);
+      background-color: rgba(var(--color-yellow1) 1);
+      transition: 0.3s ease-in-out;
+      will-change: clip-path;
+    }
+
+    &:hover {
+      &::before {
+        clip-path: circle(100% at 50% 50%);
+      }
+
+      .btn-text {
+        color: var(--color-white);
+      }
+    }
+
+    .btn {
+      &-text,
+      &-icon {
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &-translucent {
+    &-light {
+      position: relative;
+      background-color: rgba(var(--color-white) 0.03);
+      color: var(--color-white);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        clip-path: circle(0 at 50% 50%);
+        background-color: rgba(var(--color-white) 0.04);
+        transition: 0.3s ease-in-out;
+        will-change: clip-path;
+      }
+
+      &:hover {
+        &::before {
+          clip-path: circle(100% at 50% 50%);
+        }
+      }
+    }
+  }
+}
+
+._text {
+  &-upper {
+    text-transform: uppercase;
   }
 }

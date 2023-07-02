@@ -1,6 +1,5 @@
 :root {
   /* Typography */
-  --font-family-main: "Intro Black", system-ui, -apple-system, sans-serif;
   --font-size-xs: 12px;
   --font-line-xs: 20px;
   --font-size-s: 14px;
@@ -11,6 +10,14 @@
   --font-line-l: 32px;
   --font-size-xl: 32px;
   --font-line-xl: 40px;
+  --font-hisqaida-bold: "Hisqaida2018-Bold", system-ui, -apple-system, sans-serif;
+  --font-intro-black: "Intro Black", system-ui, -apple-system, sans-serif;
+  --font-maristraltt: "MagistralTT", system-ui, -apple-system, sans-serif;
+  --font-magistral-black: "Magistral Black", system-ui, -apple-system, sans-serif;
+  --font-alegreya-bold: "Alegreya Sans SC Bold", system-ui, -apple-system, sans-serif;
+  --font-geometria-regular: "Geometria Regular", system-ui, -apple-system, sans-serif;
+  --font-geometria-bold: "Geometria Bold", system-ui, -apple-system, sans-serif;
+  --font-couriernew: "CourierNew", system-ui, -apple-system, sans-serif;
 
   /* Colors */
   --color-white: #fff;
@@ -29,6 +36,7 @@
   --color-yellow2: #ffc700;
   --color-red1: #f11c4d;
   --color-red2: #ff2652;
+  --color-red2-rgb: 255 38 82;
   --color-blue1: #00dfff;
   --color-green1: #00e868;
   --color-green2: #00f493;
