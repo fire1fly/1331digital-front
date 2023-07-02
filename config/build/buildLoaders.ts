@@ -16,14 +16,7 @@ export default function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff|woff2|eot|ttf|otf)$/i,
-    use: [
-      {
-        loader: 'file-loader',
-        options: {
-          outputPath: 'assets',
-        },
-      },
-    ],
+    type: 'asset/resource',
   };
 
   const cssLoader = {
