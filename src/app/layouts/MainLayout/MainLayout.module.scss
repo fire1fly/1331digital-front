@@ -1,0 +1,60 @@
+.MainLayout {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  overflow: hidden;
+
+  &_page {
+    height: 100%;
+    padding-left: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .page_pag {
+    position: relative;
+    z-index: 2;
+    padding-top: 100px;
+  }
+}
+
+._bg_pattern {
+  &_1 {
+    position: relative;
+    background: transparent url("../../../shared/assets/images/page-bg-3.png") no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &._gradient {
+    background: linear-gradient(48deg, #241838 0%, #221a2e 100%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      display: block;
+      border-radius: 50%;
+      width: 1px;
+      height: 1px;
+      box-shadow: 0 0 500px 150px rgba(#7200ff, 20%);
+    }
+
+    &::after {
+      content: "";
+      position: absolut;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      display: block;
+      width: 1px;
+      height: 1px;
+      box-shadow: 0 0 500px 300px rgba(#381a2e, 70%);
+    }
+  }
+}
