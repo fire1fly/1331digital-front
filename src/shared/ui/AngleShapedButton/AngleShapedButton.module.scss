@@ -1,8 +1,12 @@
 .Button {
   position: relative;
+  border: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: transparent;
+  cursor: pointer;
 
   &::after {
     content: "";
