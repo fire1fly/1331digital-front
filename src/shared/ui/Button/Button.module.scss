@@ -1,0 +1,109 @@
+.Button {
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &_text,
+  &_icon {
+    position: relative;
+    z-index: 2;
+  }
+
+  &_icon {
+    flex: 0 0 auto;
+    line-height: 0;
+  }
+}
+
+.yellow {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--color-yellow1);
+  background-color: transparent;
+  color: var(--color-yellow1);
+
+  .Button_icon {
+    svg,
+    path {
+      fill: var(--color-yellow1);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0 at 50% 50%);
+    background-color: var(--color-yellow1);
+    transition: 0.3s ease-in-out;
+    will-change: clip-path;
+  }
+
+  &:hover {
+    &::before {
+      clip-path: circle(100% at 50% 50%);
+    }
+
+    .Button_text {
+      color: var(--color-white);
+    }
+  }
+
+  .Button {
+    &_text,
+    &_icon {
+      transition: 0.3s ease-in-out;
+    }
+  }
+}
+
+.translucent {
+  &_light {
+    position: relative;
+    background-color: rgba(255 255 255 / 3%);
+    color: var(--color-white);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      clip-path: circle(0 at 50% 50%);
+      background-color: rgba(255 255 255 / 4%);
+      transition: 0.3s ease-in-out;
+      will-change: clip-path;
+    }
+
+    &:hover {
+      &::before {
+        clip-path: circle(100% at 50% 50%);
+      }
+    }
+  }
+}
+
+.size {
+  &_m {
+    height: 42px;
+    padding: 0 16px;
+  }
+
+  &_l {
+    height: 54px;
+    padding: 0 20px;
+  }
+
+  &_xl {
+    height: 78px;
+    padding: 0 28px;
+  }
+}
