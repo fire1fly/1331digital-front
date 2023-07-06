@@ -1,0 +1,41 @@
+._c {
+  &-white {
+    color: var(--color-white);
+  }
+
+  &-purple {
+    &-1 {
+      color: var(--color-purple1);
+    }
+
+    &-2 {
+      color: var(--color-purple2);
+    }
+
+    &-3 {
+      color: var(--color-purple3);
+    }
+
+    &-4 {
+      color: var(--color-purple4);
+    }
+  }
+
+  &-red {
+    &-1 {
+      color: var(--color-red1);
+    }
+  }
+
+  &-blue {
+    &-1 {
+      color: var(--color-blue1);
+    }
+  }
+
+  &-yellow {
+    &-1 {
+      color: var(--color-yellow1);
+    }
+  }
+}
