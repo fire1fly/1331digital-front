@@ -1,0 +1,207 @@
+.ProjectCard {
+  position: relative;
+  z-index: 1;
+  padding: 3px;
+
+  &_backframe {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+    div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &._design {
+        background-color: var(--color-red1);
+      }
+
+      &._frontend {
+        background-color: var(--color-yellow1);
+      }
+
+      &._backend {
+        background-color: var(--color-blue1);
+      }
+    }
+
+    &._c_2 {
+      div {
+        &:nth-of-type(1) {
+          clip-path: polygon(0 0, 100% 0%, 100% calc(50% - 3px), 0% calc(50% - 3px));
+        }
+
+        &:nth-of-type(2) {
+          clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+        }
+      }
+    }
+
+    &._c_3 {
+      div {
+        &:nth-of-type(1) {
+          clip-path: polygon(0 0, calc(50% - 3px) 0%, calc(50% - 3px) 3px, 0 calc(100% - 1px));
+        }
+
+        &:nth-of-type(2) {
+          clip-path: polygon(50% 0, 100% 0%, 100% calc(100% - 3px), 50% 3px);
+        }
+
+        &:nth-of-type(3) {
+          clip-path: polygon(1px 100%, 50% 3%, 100% 100%);
+        }
+      }
+    }
+  }
+
+  &_frame {
+    position: relative;
+    z-index: 2;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    .ProjectCard {
+      &_preview {
+        transform: scale(1.05);
+      }
+
+      &_backdrop {
+        background-color: rgba(50 40 71 / 30%);
+      }
+
+      &_techtags {
+        opacity: 0;
+      }
+
+      &_logo {
+        transform: scale(0.95);
+      }
+
+      &_bottom {
+        opacity: 0;
+      }
+
+      &_btn {
+        opacity: 1;
+      }
+
+      &_backframe {
+        opacity: 1;
+      }
+    }
+  }
+
+  &._pattern {
+    &_1 {
+      width: 520px;
+    }
+
+    &_2 {
+      width: 416px;
+    }
+
+    &_3 {
+      width: 380px;
+    }
+
+    &_4 {
+      width: 328px;
+    }
+
+    &_5 {
+      width: 266px;
+    }
+  }
+
+  &_preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: 0.3s ease-in-out;
+  }
+
+  &_backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50 40 71 / 77%);
+    transition: 0.3s ease-in-out;
+  }
+
+  &_inner {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_techtags {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s ease-in-out;
+  }
+
+  &_logo {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+  &_bottom {
+    margin-top: auto;
+    transition: 0.3s ease-in-out;
+  }
+
+  &_type {
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: var(--font-magistral-black);
+    font-size: 17px;
+  }
+
+  &_sub {
+    text-align: center;
+    font-family: var(--font-alegreya-bold);
+    font-size: 13px;
+    color: var(--color-white);
+  }
+
+  &_btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-magistral-black);
+    font-size: 17px;
+    height: 42px;
+    padding: 0 16px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+}
