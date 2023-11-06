@@ -18,6 +18,14 @@
     ],
     "font-family-no-missing-generic-family-keyword": null,
     "max-line-length": 150,
-    "font-family-name-quotes": "always-unless-keyword"
+    "font-family-name-quotes": "always-unless-keyword",
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind"
+        ]
+      }
+    ]
   }
 }
