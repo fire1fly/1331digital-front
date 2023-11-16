@@ -22,8 +22,10 @@ export const ContactLink: FC<ContactLinkProps> = (props) => {
   } = props;
 
   return (
-    <Link
-      to={to}
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href={to}
       className={classNames(cls.ContactLink, className)}
       {...otherProps}
     >
@@ -42,6 +44,6 @@ export const ContactLink: FC<ContactLinkProps> = (props) => {
         </div>
         <div className={classNames(cls.ContactLink_value, '_text-upper')}>{label}</div>
       </div>
-    </Link>
+    </a>
   );
 };
