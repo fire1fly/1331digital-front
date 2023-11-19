@@ -29,7 +29,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => (
         }
 
         <div className={cls.Sidebar_f}>
-          <button type="button" className={classNames(cls.Sidebar_outbtn, 'btn')}>
+          <button type="button" className={classNames(cls.Sidebar_outbtn)}>
             <div className={cls.Sidebar_outbtn_backdrop} />
             <div className={cls.Sidebar_outbtn_space}>
               <div className={cls.item} />
