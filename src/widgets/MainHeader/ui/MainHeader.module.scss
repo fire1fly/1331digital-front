@@ -1,0 +1,19 @@
+.Header {
+  margin-bottom: 30px;
+  padding-right: 40px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &_bar {
+    &_conts {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+  }
+}
