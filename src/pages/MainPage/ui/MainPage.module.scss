@@ -1,0 +1,24 @@
+.MainPage {
+  position: relative;
+  z-index: 2;
+
+  &_row {
+    &_top {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    &_bottom {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+  }
+
+  &_pcard {
+    flex: 1 1 auto;
+    height: 244px;
+    overflow: hidden;
+  }
+}
