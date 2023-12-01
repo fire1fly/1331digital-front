@@ -6,7 +6,7 @@ import { MainHeader } from 'widgets/MainHeader';
 import cls from './MainLayout.module.scss';
 
 export const MainLayout: FC = () => (
-  <div className={classNames(cls.MainLayout, cls._bg_pattern_1)}>
+  <div className={classNames(cls.MainLayout, cls._bg_pattern_1, cls._gradient)}>
     <Sidebar />
 
     <div className={cls.MainLayout_page}>
