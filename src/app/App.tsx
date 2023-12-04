@@ -1,13 +1,11 @@
 import { Suspense } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { PageLoader } from 'widgets/PageLoader';
 import { AppRouter } from './providers/router';
 
 export const App = () => (
-  <div className={classNames('app')}>
-    <Suspense fallback="">
-      <div className="content-page">
-        <AppRouter />
-      </div>
+  <div className="app">
+    <Suspense fallback={<PageLoader />}>
+      <AppRouter />
     </Suspense>
   </div>
 );
