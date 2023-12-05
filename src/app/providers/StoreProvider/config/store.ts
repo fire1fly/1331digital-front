@@ -1,7 +1,6 @@
 import {
   CombinedState, Reducer, ReducersMapObject, configureStore,
 } from '@reduxjs/toolkit';
-import { counterReducer } from 'entities/Counter';
 import { $api } from 'shared/api/api';
 import { NavigateOptions, To } from 'react-router-dom';
 import { userReducer } from 'entities/User';
@@ -15,7 +14,6 @@ export function createReduxStore(
 ) {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
-    counter: counterReducer,
     user: userReducer,
   };
 
@@ -27,7 +25,10 @@ export function createReduxStore(
   };
 
   const store = configureStore({
-    reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
+    // TODO: delete comment after add async reducers
+    // reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
+
+    reducer: rootReducers,
     devTools: __IS_DEV__,
     preloadedState: initialState,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
@@ -38,7 +39,9 @@ export function createReduxStore(
   });
 
   // @ts-ignore - temporary before fix types
-  store.reducerManager = reducerManager;
+
+  // TODO: delete comment after add async reducers
+  // store.reducerManager = reducerManager;
 
   return store;
 }
