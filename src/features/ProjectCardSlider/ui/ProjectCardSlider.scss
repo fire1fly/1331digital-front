@@ -1,0 +1,55 @@
+.ProjectCardSlider {
+  &-card {
+    height: 244px;
+  }
+
+  .swiper-pagination {
+    top: auto;
+    right: 11px;
+    bottom: 11px;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: min-content;
+    justify-items: end;
+
+    // overflow-x: visible;
+
+    &-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+      top: auto;
+      width: 18px;
+      transform: none;
+    }
+
+    &-bullets {
+      &-dynamic {
+        .swiper-pagination-bullet {
+          transform: none;
+        }
+      }
+    }
+
+    &-bullet {
+      flex-shrink: 0;
+      margin: 6px 0;
+      margin-left: auto;
+      border-radius: 0;
+      display: block;
+      width: 7px;
+      height: 7px;
+      background: #554971;
+      transition: 0.3s;
+      opacity: 1;
+      cursor: pointer;
+
+      &-active,
+      &-main {
+        width: 18px;
+        height: 5px;
+        background: var(--color-red1);
+
+        // box-shadow: 0 0 10px 10px rgba(var(--color-red1-rgb) / 15%);
+      }
+    }
+  }
+}

@@ -1,9 +1,12 @@
 import { FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { IProjectCard, ProjectCard } from 'entities/ProjectCard';
+import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import cls from './ProjectCardSlider.module.scss';
+
 import 'swiper/scss';
+import 'swiper/scss/pagination';
+import './ProjectCardSlider.scss';
 
 interface ProjectCardSliderProps {
   className?: string;
@@ -17,16 +20,24 @@ export const ProjectCardSlider: FC<ProjectCardSliderProps> = (props) => {
   } = props;
 
   return (
-    // @ts-ignore
     <Swiper
+      modules={[Pagination]}
       direction="vertical"
-      className={classNames(cls.ProjectCardSlider, className)}
+      className={classNames(className, 'ProjectCardSlider')}
+      pagination={{
+        dynamicBullets: true,
+        clickable: true,
+      }}
+
     >
       {
         items.map((item) => (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide
+            key={item.id}
+          >
             <ProjectCard
               item={item}
+              className="ProjectCardSlider-card"
             />
           </SwiperSlide>
         ))
