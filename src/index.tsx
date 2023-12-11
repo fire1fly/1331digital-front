@@ -5,6 +5,7 @@ import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import { BrowserRouter } from 'react-router-dom';
 import { StoreProvider } from 'app/providers/StoreProvider';
 
+import 'shared/config/i18n/i18n';
 import { App } from './app/App';
 
 render(
