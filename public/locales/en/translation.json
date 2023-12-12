@@ -1,16 +1,18 @@
 {
-  "feedback": "Feedback",
-  "labels": {
-    "portfolio": "Portfolio",
-    "team": "Team",
-    "contacts": "Services",
-    "services": "Services",
-    "toFillForm": "Fill out the form",
-    "pages": "Pages"
-  },
-  "workType": {
-    "markup": "layout",
-    "design": "design",
-    "programming": "programming"
+  "translation": {
+    "feedback": "Feedback",
+    "labels": {
+      "portfolio": "Portfolio",
+      "team": "Team",
+      "contacts": "Services",
+      "services": "Services",
+      "toFillForm": "Fill out the form",
+      "pages": "Pages"
+    },
+    "workType": {
+      "markup": "layout",
+      "design": "design",
+      "programming": "programming"
+    }
   }
 }

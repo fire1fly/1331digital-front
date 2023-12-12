@@ -13,10 +13,11 @@
     "paths": {
       "*": [
         "./src/*"
-      ]
+      ],
     },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true // TEMP: delete after configure backend plugin for i18n
   },
   "ts-node": {
     "compilerOptions": {
