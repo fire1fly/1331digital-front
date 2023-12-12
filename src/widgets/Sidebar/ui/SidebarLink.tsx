@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { useTranslation } from 'react-i18next';
 import cls from './Sidebar.module.scss';
 import { SidebarLinkType } from '../model/sidebarLinks';
 
@@ -15,13 +15,15 @@ export const SidebarLink: FC<SidebarLinkProps> = ({ link }) => {
     icon: Icon,
   } = link;
 
+  const { t } = useTranslation();
+
   return (
     <Link to={path} className={cls.Sidebar_link}>
       <div className={cls.Sidebar_link_shape} />
       <div className={cls.Sidebar_link_icon}>
         <Icon />
       </div>
-      <div className={cls.Sidebar_link_label}>{text}</div>
+      <div className={cls.Sidebar_link_label}>{t(text)}</div>
     </Link>
   );
 };

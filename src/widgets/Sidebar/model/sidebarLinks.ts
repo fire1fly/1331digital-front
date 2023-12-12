@@ -12,22 +12,22 @@ export interface SidebarLinkType {
 export const sidebarLinksList: SidebarLinkType[] = [
   {
     path: '/',
-    text: 'Портфолио',
+    text: 'labels.portfolio',
     icon: IconPortfolio,
   },
   {
     path: '/team',
-    text: 'Команда',
+    text: 'labels.team',
     icon: IconTeam,
   },
   {
     path: '/contacts',
-    text: 'Контакты',
+    text: 'labels.contacts',
     icon: IconContacts,
   },
   {
     path: '/services',
-    text: 'Услуги',
+    text: 'labels.services',
     icon: IconServices,
   },
 ];
