@@ -3,6 +3,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { ContactLink } from 'shared/ui/ContactLink/ContactLink';
 import { AngleShapedButton } from 'shared/ui/AngleShapedButton/AngleShapedButton';
 import { Link } from 'react-router-dom';
+import { LangSwitcher } from 'entities/LangSwitcher';
+import { useTranslation } from 'react-i18next';
 import cls from './MainHeader.module.scss';
 import { contactList } from '../model/contacts';
 
@@ -11,6 +13,8 @@ interface MainHeaderProps {
 }
 
 export const MainHeader: FC<MainHeaderProps> = ({ className }) => {
+  const { t } = useTranslation();
+
   const links = contactList.map((item) => (
     <ContactLink
       key={item.to}
@@ -27,10 +31,11 @@ export const MainHeader: FC<MainHeaderProps> = ({ className }) => {
         <div className={cls.Header_bar_conts}>
           {links}
         </div>
-        <div className="h_btn_bar">
+        <div className="flex items-center gap-8">
           <Link to="/form">
-            <AngleShapedButton>Заполнить форму</AngleShapedButton>
+            <AngleShapedButton>{t('labels.toFillForm')}</AngleShapedButton>
           </Link>
+          <LangSwitcher />
         </div>
       </div>
     </header>
