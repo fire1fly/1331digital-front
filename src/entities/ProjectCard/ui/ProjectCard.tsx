@@ -5,6 +5,7 @@ import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import designImage from 'shared/assets/images/techtag-design.png';
 import frontendImage from 'shared/assets/images/techtag-html.png';
 import backendImage from 'shared/assets/images/techtag-php.png';
+import { useTranslation } from 'react-i18next';
 import { IProjectCard } from '../model/types';
 import cls from './ProjectCard.module.scss';
 
@@ -38,6 +39,8 @@ export const ProjectCard: FC<ProjectCardProps> = (props) => {
     logo,
     tags,
   } = item;
+
+  const { t } = useTranslation();
 
   return (
     <div className={classNames(cls.ProjectCard, className)}>
@@ -82,8 +85,15 @@ export const ProjectCard: FC<ProjectCardProps> = (props) => {
 
           <div className={classNames(cls.ProjectCard_bottom)}>
             <div className={classNames(cls.ProjectCard_info)}>
-              <div className={classNames(cls.ProjectCard_type, '_text-upper', '_c-yellow-1')}>Вёрстка макета</div>
-              <div className={classNames(cls.ProjectCard_sub)}>86 страниц</div>
+              <div
+                className={classNames(cls.ProjectCard_type, '_text-upper', '_c-yellow-1')}
+              >
+                {t('workType.programming')}
+              </div>
+              <div className={classNames(cls.ProjectCard_sub)}>
+                {t('labels.pages')}
+                : 86
+              </div>
             </div>
 
             {/* TODO: pagination */}

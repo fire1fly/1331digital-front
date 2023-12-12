@@ -1,0 +1,21 @@
+.LangSwitcher {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+
+  &_arrow {
+    width: 0;
+    height: 0;
+    border-top: 5px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+
+  &_list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+}
