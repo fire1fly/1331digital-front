@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --env port=7777",
-    "start:json:server": "node ./json-server/index.js",
+    "start:mockserver": "json-server --watch ./json-server/db.json --port 3333 --static ./src/shared/assets/images",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "lint:ts": "eslint \"**/*.{ts, tsx}\"",

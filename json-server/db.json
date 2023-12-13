@@ -1,19 +1,5 @@
 {
-  "users": [
-    {
-      "id": "1",
-      "username": "admin",
-      "password": "123"
-    }
-  ],
-  "profile": {
-    "firstname": "Dany",
-    "lastname": "L",
-    "age": 45,
-    "city": "Ostin",
-    "username": "fire1fly",
-    "avatar": "https://avatars.githubusercontent.com/u/56827297",
-    "country": "Armenia",
-    "currency": "AMD"
+  "pic": {
+    "pic": "localhost:3333/main-project-card-preview-1.png"
   }
 }
