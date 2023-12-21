@@ -30,6 +30,7 @@ const projects = [
 
 const MainPage = () => (
   <div className={cls.MainPage}>
+    <h1>{__API__}</h1>
     <div className={cls.MainPage_row_top}>
       <ProjectCard
         item={projects[0]}
