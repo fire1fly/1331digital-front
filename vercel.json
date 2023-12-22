@@ -5,12 +5,8 @@
       "destination": "/"
     },
     {
-      "source": "/locales/en/translation.json",
-      "destination": "/locales/en/translation.json"
-    },
-    {
-      "source": "/locales/ru/translation.json",
-      "destination": "/locales/ru/translation.json"
+      "source": "/locales/:match*",
+      "destination": "https://1331digital-front.vercel.app/locales/:match*"
     }
   ]
 }
