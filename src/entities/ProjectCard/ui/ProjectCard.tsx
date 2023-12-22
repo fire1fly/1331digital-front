@@ -86,9 +86,9 @@ export const ProjectCard: FC<ProjectCardProps> = (props) => {
           <div className={classNames(cls.ProjectCard_bottom)}>
             <div className={classNames(cls.ProjectCard_info)}>
               <div
-                className={classNames(cls.ProjectCard_type, '_text-upper', '_c-yellow-1')}
+                className={classNames(cls.ProjectCard_type, 'uppercase', '_c-yellow-1')}
               >
-                {t('workType.programming')}
+                {t('workType.siteturnkey')}
               </div>
               <div className={classNames(cls.ProjectCard_sub)}>
                 {t('labels.pages')}
