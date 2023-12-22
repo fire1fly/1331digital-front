@@ -1,18 +1,17 @@
 {
-  "translation": {
-    "feedback": "Обратная связь",
-    "labels": {
-      "portfolio": "Портфолио",
-      "team": "Команда",
-      "contacts": "Контакты",
-      "services": "Услуги",
-      "toFillForm": "Заполнить форму",
-      "pages": "Страниц"
-    },
-    "workType": {
-      "markup": "верстка макета",
-      "design": "дизайн",
-      "programming": "программирование"
-    }
+  "feedback": "Обратная связь",
+  "labels": {
+    "portfolio": "Портфолио",
+    "team": "Команда",
+    "contacts": "Контакты",
+    "services": "Услуги",
+    "toFillForm": "Заполнить форму",
+    "pages": "Страниц"
+  },
+  "workType": {
+    "markup": "верстка макета",
+    "design": "дизайн",
+    "programming": "программирование",
+    "siteturnkey": "сайт под ключ"
   }
 }

@@ -1,18 +1,17 @@
 {
-  "translation": {
-    "feedback": "Feedback",
-    "labels": {
-      "portfolio": "Portfolio",
-      "team": "Team",
-      "contacts": "Contacts",
-      "services": "Services",
-      "toFillForm": "Fill out the form",
-      "pages": "Pages"
-    },
-    "workType": {
-      "markup": "layout",
-      "design": "design",
-      "programming": "programming"
-    }
+  "feedback": "Feedback",
+  "labels": {
+    "portfolio": "Portfolio",
+    "team": "Team",
+    "contacts": "Contacts",
+    "services": "Services",
+    "toFillForm": "Fill out the form",
+    "pages": "Pages"
+  },
+  "workType": {
+    "markup": "layout",
+    "design": "design",
+    "programming": "programming",
+    "siteturnkey": "turnkey website"
   }
 }
