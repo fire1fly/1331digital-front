@@ -31,7 +31,7 @@ const projects = [
 
 const MainPage = () => {
   useEffect(() => {
-    const response = fetch(`${__API__}projects`).then((response) => response.json()).then((json) => console.log(json));
+    const response = fetch(`${__API__}/projects`).then((response) => response.json()).then((json) => console.log(json));
   }, []);
 
   return (
