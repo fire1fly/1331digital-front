@@ -3,10 +3,6 @@
     {
       "source": "/(.*)",
       "destination": "/"
-    },
-    {
-      "source": "/locales/:match*",
-      "destination": "https://1331digital-front.vercel.app/locales/:match*"
     }
   ]
 }

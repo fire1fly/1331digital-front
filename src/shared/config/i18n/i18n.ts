@@ -22,7 +22,7 @@ i18n
     //   ru,
     // },
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      loadPath: `${__API__}/locales/{{lng}}/{{ns}}.json`,
     },
   });
 
