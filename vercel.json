@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/locales/en/translation.json",
+      "destination": "/locales/en/translation.json"
+    },
+    {
+      "source": "/locales/ru/translation.json",
+      "destination": "/locales/ru/translation.json"
+    },
+    {
       "source": "/(.*)",
       "destination": "/"
     }
