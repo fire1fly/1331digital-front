@@ -3,13 +3,12 @@
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 480px 1fr;
+  grid-template-columns: 400px calc(100% - 400px);
   overflow: hidden;
 
   &_page {
     height: 100%;
     padding-top: 50px;
-    padding-left: 40px;
     display: flex;
     flex-direction: column;
   }
