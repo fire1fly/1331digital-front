@@ -10,7 +10,7 @@ export interface Contact {
 
 export const contactList: Contact[] = [
   {
-    to: 'https://t.me/test',
+    to: 'https://t.me/Web_pautov',
     icon: iconTelegram,
     type: 'telegram',
     label: '@1331support',
