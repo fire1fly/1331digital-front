@@ -13,12 +13,14 @@
     grid-auto-rows: min-content;
     justify-items: end;
 
-    // overflow-x: visible;
-
     &-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
       top: auto;
       width: 18px;
       transform: none;
+
+      .swiper-pagination-bullet {
+        transition: 0.3s;
+      }
     }
 
     &-bullets {
