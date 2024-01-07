@@ -15,6 +15,11 @@ module.exports = {
         'geometria-bold': ['Geometria Bold', 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif'],
         couriernew: ['CourierNew', 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif'],
       },
+      colors: {
+        design: '#f11c4d',
+        frontend: '#ffb849',
+        backend: '#00dfff',
+      },
     },
   },
   plugins: [],
