@@ -1,6 +1,5 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Link } from 'react-router-dom';
 import cls from './ContactLink.module.scss';
 
 interface ContactLinkProps {
@@ -11,7 +10,7 @@ interface ContactLinkProps {
   className?: string;
 }
 
-export const ContactLink: FC<ContactLinkProps> = (props) => {
+export const ContactLink: FC<ContactLinkProps> = memo((props) => {
   const {
     to,
     icon: Icon,
@@ -46,4 +45,4 @@ export const ContactLink: FC<ContactLinkProps> = (props) => {
       </div>
     </a>
   );
-};
+});
