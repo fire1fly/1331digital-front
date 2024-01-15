@@ -15,7 +15,7 @@ interface ILanguage {
   value: string;
 }
 
-const languages: ILanguage[] = [{ label: 'ru', value: 'ru-RU' }, { label: 'en', value: 'en-US' }];
+const languages: ILanguage[] = [{ label: 'ru', value: 'ru' }, { label: 'en', value: 'en' }];
 
 export const LangSwitcher: FC<LangSwitcherProps> = ({ className }) => {
   const { i18n } = useTranslation();

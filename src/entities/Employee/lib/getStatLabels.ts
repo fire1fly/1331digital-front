@@ -5,7 +5,7 @@ interface IStatLabels {
 }
 
 const getStatLabels = (value: number): IStatLabels => ({
-  'ru-RU': {
+  ru: {
     case: {
       valueSup: '',
       label: declOfNum(value, ['кейс', 'кейса', 'кейсов']),
@@ -15,7 +15,7 @@ const getStatLabels = (value: number): IStatLabels => ({
       label: 'опыта',
     },
   },
-  'en-US': {
+  en: {
     case: {
       valueSup: '',
       label: value !== 1 ? 'cases' : 'case',
