@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard, Mousewheel } from 'swiper';
-import { MiniStatCard } from 'shared/ui/MiniStatCard/MiniStatCard';
 import { EmployeeCard } from 'entities/Employee';
 import PortfolioPage from '../PortfolioPage/PortfolioPage';
 import cls from './MainPage.module.scss';
