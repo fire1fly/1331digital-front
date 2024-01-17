@@ -3,25 +3,20 @@ import { initReactI18next } from 'react-i18next';
 
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import en from '../../../../public/locales/en/translation.json';
-import ru from '../../../../public/locales/ru/translation.json';
 
 i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'ru',
-    load: 'languageOnly',
+    fallbackLng: 'ru-RU',
+    load: 'currentOnly',
+    supportedLngs: ['ru-RU', 'en-US'],
     debug: __IS_DEV__,
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
-    // resources: {
-    //   en,
-    //   ru,
-    // },
     backend: {
       loadPath: `${__API__}/locales/{{lng}}/{{ns}}.json`,
     },
