@@ -21,7 +21,7 @@ const getStatLabels = (value: number): IStatLabels => ({
       label: value !== 1 ? 'cases' : 'case',
     },
     experience: {
-      valueSup: 'year',
+      valueSup: value !== 1 ? 'years' : 'year',
       label: 'exp',
     },
   },
