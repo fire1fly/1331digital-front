@@ -1,0 +1,102 @@
+.design {
+  --box-shadow-color: var(--color-red1);
+}
+
+.frontend {
+  --box-shadow-color: var(--color-yellow1);
+}
+
+.backend {
+  --box-shadow-color: var(--color-blue1);
+}
+
+.shadow {
+  &_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 40%;
+    box-shadow: 0 0 60px 20px var(--box-shadow-color);
+    animation: shadow1 4s linear 0s infinite normal forwards;
+  }
+
+  &_2 {
+    position: absolute;
+    left: 60%;
+    top: 100px;
+    width: 0;
+    height: 0;
+    box-shadow: 0 0 40px 20px var(--box-shadow-color);
+    animation: shadow2 3s linear 0s infinite normal forwards;
+  }
+
+  &_3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 20%;
+    transform: rotate(5deg);
+    box-shadow: 0 0 50px 20px var(--box-shadow-color);
+    animation: shadow1 6s linear 0s infinite normal forwards;
+  }
+}
+
+@keyframes shadowcontainer {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shadow1 {
+  0% {
+    transform: scale(1.1, 0.9) rotate(1deg);
+  }
+
+  20% {
+    transform: scale(1.2, 1) rotate(2deg);
+  }
+
+  35% {
+    transform: scale(1.3, 1.1) rotate(3deg);
+  }
+
+  50% {
+    transform: scale(1.4, 1) rotate(2deg);
+  }
+
+  65% {
+    transform: scale(1.3, 0.9) rotate(1deg);
+  }
+
+  85% {
+    transform: scale(1.2, 0.8) rotate(1deg);
+  }
+
+  100% {
+    transform: scale(1.1, 0.9) rotate(1deg);
+  }
+}
+
+@keyframes shadow2 {
+  0% {
+    transform: scale(1.1, 0.9);
+  }
+
+  20% {
+    transform: scale(1.2, 0.8);
+  }
+
+  40% {
+    transform: scale(1.3, 0.7);
+  }
+
+  60% {
+    transform: scale(1.2, 0.8);
+  }
+
+  100% {
+    transform: scale(1.1, 0.9);
+  }
+}
