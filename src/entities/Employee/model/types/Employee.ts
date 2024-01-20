@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface IEmployee {
   id: string;
   name: string;
@@ -6,6 +8,6 @@ export interface IEmployee {
   position?: string;
   avatarURL?: string;
   stat?: {type: string; value: number}[];
-  skills?: {label: string; iconURL: string}[];
+  skills?: {label: string; iconURL: string | React.VFC<React.SVGProps<SVGSVGElement>>}[];
   description?: string;
 }
