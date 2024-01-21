@@ -1,21 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard, Mousewheel } from 'swiper';
 import { EmployeeCard } from 'entities/Employee';
-import PortfolioPage from '../PortfolioPage/PortfolioPage';
-import cls from './MainPage.module.scss';
 
-const employees = [
-  {
-    id: '1',
-    name: 'Daniel',
-    type: 'frontend',
-    position: 'Middle Frontend Developer',
-    stat: [
-      { type: 'case', value: 2 },
-      { type: 'experience', value: 21 },
-    ],
-  },
-];
+import cls from './MainPage.module.scss';
+import PortfolioPage from '../PortfolioPage/PortfolioPage';
+import { EmployeesPage } from '../EmployeesPage/EmployeesPage';
 
 const MainPage = () => (
   <div className={cls.page}>
@@ -28,9 +17,7 @@ const MainPage = () => (
       mousewheel
     >
       <SwiperSlide>
-        <div className="px-20">
-          <EmployeeCard className="w-[325px]" item={employees[0]} />
-        </div>
+        <EmployeesPage />
       </SwiperSlide>
       <SwiperSlide>
         <PortfolioPage />
